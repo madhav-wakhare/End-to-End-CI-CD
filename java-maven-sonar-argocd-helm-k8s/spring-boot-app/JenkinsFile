@@ -9,6 +9,7 @@ pipeline {
     stage('Checkout') {
       steps {
         sh 'echo passed'
+        git branch: 'main', url: 'https://github.com/madhav-wakhare/End-to-End-CI-CD.git'
       }
     }
     stage('Build and Test') {

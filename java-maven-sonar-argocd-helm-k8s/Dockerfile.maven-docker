@@ -1,0 +1,9 @@
+FROM maven:3.9.6-eclipse-temurin-21
+
+# Install Docker CLI
+RUN apt-get update && \
+    apt-get install -y docker.io && \
+    apt-get clean
+
+# Set workdir
+WORKDIR /app

@@ -55,7 +55,9 @@ pipeline {
             GIT_REPO_NAME = "End-to-End-CI-CD"
             GIT_USER_NAME = "madhav-wakhare"
         }
-        steps {
+     steps {
+            checkout scm
+       
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
                     ls -lah
